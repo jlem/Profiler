@@ -1,0 +1,23 @@
+{
+    "name": "jlem/profiler",
+    "description": "",
+    "authors": [
+        {
+            "name": "Jon LeMaitre",
+            "email": "jlemaitre@theatomgroup.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-4": {
+            "Jlem\\Profiler\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

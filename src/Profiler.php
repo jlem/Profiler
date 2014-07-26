@@ -1,6 +1,6 @@
 <?php namespace Jlem\Profiler;
 
-use Illuminate\View\Environment;
+use Illuminate\View\Factory;
 use Jlem\Profiler\Query\QueryLogPresenter;
 
 class Profiler 
@@ -8,7 +8,7 @@ class Profiler
 	/**
 	 * View environment object
 	 * 
-	 * @var Environment
+	 * @var Factory
 	 */
 	
 	protected $View;
@@ -27,12 +27,12 @@ class Profiler
 	/**
 	 * Create a new instance
 	 * 		
-	 * @param Illuminate\View\Environment 		$View
+	 * @param Illuminate\View\Factory 		$View
 	 * @param Jlem\Profiler\Query\QueryLogPresenter 	$QueryLogPresenter
 	 * @return  void
 	 */
 	
-	public function __construct(Environment $View, QueryLogPresenter $QueryLogPresenter)
+	public function __construct(Factory $View, QueryLogPresenter $QueryLogPresenter)
 	{
 		$this->View = $View;
 		$this->QueryLogPresenter = $QueryLogPresenter;
